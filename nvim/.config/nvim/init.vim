@@ -19,6 +19,10 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'christoomey/vim-sort-motion'
 call plug#end()
 
 set bg=light
@@ -144,3 +148,7 @@ autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 if &diff
     highlight! link DiffText MatchParen
 endif
+
+" Coc Settings
+nmap <silent> gd <Plug>(coc-definition)
+let g:coc_start_at_startup = v:false
