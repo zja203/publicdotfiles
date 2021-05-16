@@ -11,7 +11,6 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
 Plug 'jreybert/vimagit'
-Plug 'junegunn/goyo.vim'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
@@ -58,9 +57,6 @@ set noswapfile
 
 " Jumps to next placeholder
 map <leader><space> /<++><cr>df>i
-
-" Goyo plugin makes text more readable when writing prose:
-map <leader>f :Goyo \| set linebreak<CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
