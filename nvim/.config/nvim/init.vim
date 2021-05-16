@@ -43,6 +43,9 @@ syntax on
 set encoding=utf-8
 set number relativenumber
 
+" Makes searches case-insensitive when typed in all lowercase and case-sensitive otherwise
+set smartcase
+
 " Enable autocompletion:
 set wildmode=longest,list,full
 
@@ -152,3 +155,6 @@ endif
 " Coc Settings
 nmap <silent> gd <Plug>(coc-definition)
 let g:coc_start_at_startup = v:false
+
+" Enables word count in status line for certain file types
+let g:airline#extensions#wordcount#filetypes = '\vmail|markdown|markdown.pandoc|tex|text|vimwiki'
