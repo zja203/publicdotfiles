@@ -25,7 +25,7 @@ alias \
 	ka="killall" \
 	g="git" \
 	YT="youtube-viewer" \
-    ytbest="youtube-dl -f bestvideo+bestaudio" \
+    ytbest="youtube-dl --add-metadata -f bestvideo+bestaudio" \
 	z="zathura"
 
 alias ll="ls -lah"
