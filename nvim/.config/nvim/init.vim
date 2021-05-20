@@ -158,3 +158,6 @@ let g:coc_start_at_startup = v:false
 
 " Enables word count in status line for certain file types
 let g:airline#extensions#wordcount#filetypes = '\vmail|markdown|markdown.pandoc|tex|text|vimwiki'
+
+" Turns LaTeX formatted text, where single newlines are ignored into standard text
+map <leader>f :%s/[^\n]\@<=\n[^\n]\@=/ /g<CR>
