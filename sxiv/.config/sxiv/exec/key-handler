@@ -28,7 +28,7 @@ do
 	"d")
 		[ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
 	"g")	ifinstalled gimp && setsid -f gimp "$file" ;;
-	"i")	$TERMINAL -n "mediainfo" -t "Media Info" -g 120x34 -e sh -c "mediainfo $file | less" ;;
+	"i")	$TERMINAL -n "mediainfo" -t "Media Info" -g 120x34 -e sh -c "mediainfo \"$file\" | less" ;;
     #The above command uses some dwm magic to show the mediainfo output in less in a popup terminal window.
     #Depending on your dwm build, this may not work as intended.
     #If you would rather have the info appear in a dunst notification, comment out the above command and uncomment the below command.
