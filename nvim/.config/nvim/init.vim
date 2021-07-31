@@ -55,7 +55,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
 set smarttab
 
 " Disable swapfiles because the make things like pasting and macros a bit slower, and I don't really need them
