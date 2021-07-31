@@ -27,7 +27,7 @@ map <C-v> <C-w>v
 map R :restart<CR>
 map x :!sxiv -ft * 2>/dev/null &<CR>
 nnoremap o :file &<cr>
-map T :!showthumbs "$(pwd)"<CR>
+map T :!showthumbs "$(pwd)" 3<CR>
 map E :!$EDITOR %f<CR>
 map mkd :mkdir<space>
 map bg :!setbg %f &<CR>
@@ -64,7 +64,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 \ %pc
 \ vifmimg clear
 
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm,*.webp
 \ vifmimg draw %px %py %pw %ph %c
 \ %pc
 \ vifmimg clear
@@ -98,7 +98,7 @@ filextype *.html,*.htm firefox %f 2>/dev/null &
 fileviewer *.docx docx2txt %c -
 fileviewer *.odt odt2txt %c -
 
-filetype *.csv,*.xlsx sc-im %c
+filetype *.csv,*.xlsx, *.sc sc-im %c
 fileviewer *.csv sed "s/,,,,/,,-,,/g;s/,,/ /g" %c | column -t | sed "s/ - /  /g" | cut -c -%pw
 
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus mpv --no-audio-display %c
@@ -115,11 +115,11 @@ filetype *.zip,*.7z,*.rar,*.tar.gz,*.tar.xz ext %f
 fileviewer *.[1-8] man ./%c | col -b
 filetype *.[1-8] man ./%c
 
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.ico,*.gif,*.xpm  rotdir "%f" 2>/dev/null | sxiv -ia 2>/dev/null &
+filetype *.bmp,*.jpg,*.jpeg,*.png,*.ico,*.gif,*.xpm,*.webp rotdir "%f" 2> /dev/null | sxiv -ia 2> /dev/null &
 
 filextype *.svg inkscape %f 2>/dev/null &
 filextype *.xcf gimp %f 2>/dev/null &
 
 filetype *.ssh FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR
 
-set vifminfo=dhistory,chistory,tui,shistory,phistory,fhistory,dirstack,registers,bookmarks,bmarks
+set vifminfo=chistory,tui,fhistory,registers,bookmarks,bmarks
