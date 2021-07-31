@@ -21,7 +21,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-sort-motion'
 call plug#end()
 
@@ -152,9 +151,7 @@ if &diff
     highlight! link DiffText MatchParen
 endif
 
-" Coc Settings
-nmap <silent> gd <Plug>(coc-definition)
-let g:coc_start_at_startup = v:false
+au BufReadPost *.hbs set syntax=html | set filetype=html
 
 " Enables word count in status line for certain file types
 let g:airline#extensions#wordcount#filetypes = '\vmail|markdown|markdown.pandoc|tex|text|vimwiki'
