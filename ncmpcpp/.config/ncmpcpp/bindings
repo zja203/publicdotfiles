@@ -3,15 +3,15 @@ def_key "e"
 def_key "l"
   show_lyrics
 def_key "+"
-    show_clock
+  show_clock
 def_key "0"
-    volume_up
+  volume_up
 def_key "9"
-    volume_down
+  volume_down
 def_key "n"
-    next_found_item
+  next_found_item
 def_key "N"
-    previous_found_item
+  previous_found_item
 def_key "h"
   jump_to_parent_directory
 def_key "m"
